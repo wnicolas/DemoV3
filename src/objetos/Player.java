@@ -12,11 +12,15 @@ import sonido.Strategy;
 
 public class Player extends GameObject {
 	
-	Strategy sonido;
 
-	public Player(BufferedImage textura, Vector2D posicion) {
-		super(textura, posicion);
+	Strategy sonido;
+	
+
+	public Player(String tipo, Vector2D posicion) {
+		super(tipo, posicion);
+		
 	}
+	
 
 	@Override
 	public void actualizar() {
@@ -30,26 +34,24 @@ public class Player extends GameObject {
 			posicion.setX(posicion.getX()-5);
 		}
 		if(KeyBoard.J) {
-			System.out.println("Salto");
 			sonido=new JumpSound();
 			sonido.getSonido();
 		}
 		if(KeyBoard.K) {
-			System.out.println("Ataque");
 			sonido=new AttackSound();
 			sonido.getSonido();
 		}
 		
 	}
 
-	int i=0;
+	//int i=0;
 	
 	@Override
 	public void dibujar(Graphics g) {
-		i++;
+		/*i++;
 		i=i%1;
 		g.drawImage(Assets.rogue_idle[i],(int) posicion.getX(), (int)posicion.getY(), null);
-		
+		*/
 	}
 
 }

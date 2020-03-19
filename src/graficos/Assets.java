@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 public class Assets {
 
-	public static BufferedImage player;
+	//public static BufferedImage player;
 	
 	public static BufferedImage[] rogue_idle=new BufferedImage[17];
 	public static BufferedImage[] rogue_attack=new BufferedImage[7];
@@ -13,12 +13,20 @@ public class Assets {
 	public static BufferedImage[] rogue_push=new BufferedImage[4];
 	public static BufferedImage[] rogue_stop=new BufferedImage[1];
 	
+	public static BufferedImage[] mage_attack=new BufferedImage[7];
+	
+	public static BufferedImage[] knight_attack=new BufferedImage[5];
+	
 	public static int index=1;
 	
 	public static void init() {
 		//Cargando accion attack
 		for(int i=0;i<7;i++) {
 			rogue_attack[i]=Loader.imageLoader("/rogue_attack/Attack"+(i+1)+".png");
+			mage_attack[i]=Loader.imageLoader("/mage_attack/Attack"+(i+1)+".png");
+		}
+		for(int i=0;i<5;i++) {
+			knight_attack[i]=Loader.imageLoader("/knight_attack/attack"+(i)+".png");
 		}
 		
 		//Cargando accio walk
