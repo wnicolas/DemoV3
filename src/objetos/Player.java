@@ -12,16 +12,13 @@ import sonido.Strategy;
 
 public class Player extends GameObject {
 	
-
 	Strategy sonido;
 	
-
 	public Player(String tipo, Vector2D posicion) {
 		super(tipo, posicion);
 		
 	}
 	
-
 	@Override
 	public void actualizar() {
 		if(KeyBoard.W)
@@ -43,15 +40,10 @@ public class Player extends GameObject {
 		}
 		
 	}
-
-	//int i=0;
 	
 	@Override
 	public void dibujar(Graphics g) {
-		/*i++;
-		i=i%1;
-		g.drawImage(Assets.rogue_idle[i],(int) posicion.getX(), (int)posicion.getY(), null);
-		*/
+
 	}
 
 }
